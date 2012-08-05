@@ -1,3 +1,4 @@
-[submodule "stripe-php"]
-	path = stripe-php
+
+[submodule "vendor"]
+	path = vendor
 	url = git://github.com/stripe/stripe-php.git
