@@ -18,7 +18,18 @@ Then in the boostrap file add the Kohana module to the modules method.
 Configuration File
 ----------
 
+The config file is found inside the config folder of the module folder. Copy the config file named, stripe.php, and then paste the copy in the config file inside the config folder found in the application folder.
 
+Now that the config file is inside application/config folder, add the informations needed, that are listed bellow.
+
+You need the test keys (only if you are testing out the code) and the live keys (only when you are ready to go live) that you will get from your Stripe account, in the [settings section](https://manage.stripe.com/#account/apikeys).
+
+1. test
+    * secret_key
+    * publishable_key
+2. live
+    * secret_key
+    * publishable_key
 
 -------
 
