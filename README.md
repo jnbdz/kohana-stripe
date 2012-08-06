@@ -6,7 +6,14 @@ Stripe payment Kohana module.
 How to use
 ----------
 
+###Setup:
 
+To add the submodule with Git you need to apply these commands:
+
+    git submodule init
+    git submodule update
+
+Then in the boostrap file add the Kohana module to the modules method.
 
 Configuration File
 ----------
