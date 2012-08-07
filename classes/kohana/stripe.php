@@ -23,6 +23,7 @@ class Kohana_STRIPE {
 		require_once Kohana::find_file('vendor', 'stripe-php/lib/Stripe', 'php');
 
 		$config = Kohana::config('stripe');
+		var_dump($config);
 		self::$status = $config['status'];
 die(var_dump($config[self::$status]['private_key']));
 //		self::$private_key = $config[self::$status]['private_key'];
