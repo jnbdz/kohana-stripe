@@ -10,8 +10,8 @@
 
 class Kohana_STRIPE {
 
-	protected static $private_key = NULL;
-	protected static $publishable_key = NULL;
+	private static $private_key = NULL;
+	public static $publishable_key = NULL;
 
 	public static function init()
 	{
@@ -22,8 +22,9 @@ class Kohana_STRIPE {
 		require_once Kohana::find_file('vendor', 'stripe-php/lib/Stripe', 'php');
 
 		$config = Kohana::config('stripe');
-		self::$private_key = $config['private_key'];
-		self::$publishable_key = $config['publishable_key'];
+		self::$status = $config['status'];
+		self::$private_key = $config[self::$status]['private_key'];
+		self::$publishable_key = $config[self::$status]['publishable_key'];
 
 		Stripe::setApiKey(self::$private_key);
 	}
