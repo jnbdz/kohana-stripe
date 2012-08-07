@@ -11,25 +11,23 @@
 class Kohana_STRIPE {
 
 	public static $status = NULL;
-	private static $private_key = NULL;
+	private static $secret_key = NULL;
 	public static $publishable_key = NULL;
 
 	public static function init()
 	{
-		if (self::$private_key != null && self::$publishable_key != null) {
+		if (self::$secret_key != null && self::$publishable_key != null) {
 			return;
 		}
 
 		require_once Kohana::find_file('vendor', 'stripe-php/lib/Stripe', 'php');
 
 		$config = Kohana::config('stripe');
-		var_dump($config);
 		self::$status = $config['status'];
-die(var_dump($config[self::$status]['private_key']));
-//		self::$private_key = $config[self::$status]['private_key'];
+		self::$secret_key = $config[self::$status]['secret_key'];
 		self::$publishable_key = $config[self::$status]['publishable_key'];
 
-		Stripe::setApiKey(self::$private_key);
+		Stripe::setApiKey(self::$secret_key);
 	}
 
 } // End of Stripe
