@@ -10,6 +10,7 @@
 
 class Kohana_STRIPE {
 
+	public static $status = NULL;
 	private static $private_key = NULL;
 	public static $publishable_key = NULL;
 
