@@ -25,7 +25,7 @@ class Kohana_STRIPE {
 		$config = Kohana::config('stripe');
 		self::$status = $config['status'];
 die(var_dump($config[self::$status]['private_key']));
-		self::$private_key = $config[self::$status]['private_key'];
+//		self::$private_key = $config[self::$status]['private_key'];
 		self::$publishable_key = $config[self::$status]['publishable_key'];
 
 		Stripe::setApiKey(self::$private_key);
