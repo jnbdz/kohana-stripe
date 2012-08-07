@@ -19,7 +19,7 @@ class Kohana_STRIPE {
 			return;
 		}
 
-		require_once Kohana::find_file('vendor', '../../stripe-php/lib/Stripe', 'php');
+		require_once Kohana::find_file('../../vendor', 'stripe-php/lib/Stripe', 'php');
 
 		$config = Kohana::config('stripe');
 		self::$status = $config['status'];
