@@ -8,7 +8,7 @@
 * @license        http://www.opensource.org/licenses/isc-license.txt
 */
 
-class Kohana_STRIPE {
+class Kohana_Stripe {
 
 	public static $status = NULL;
 	private static $secret_key = NULL;
