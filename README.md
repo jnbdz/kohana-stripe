@@ -8,29 +8,25 @@ How to use
 
 ###Setup:
 
-To add the submodule with Git you need to apply these commands:
+To add the submodule with Git you need to use these commands:
 
     git submodule init
     git submodule update
 
-Then in the boostrap file add the Kohana module to the modules method.
+Then in the boostrap file add the this module, to the modules method.
 
 ###Adding the code:
 
-In one of your methods or in PHP OOP __construct method, you add this line:
+In one of your methods or in PHP (OOP) __construct method, you add this line:
 
     Kohana_Stripe::init();
 
-This will load the "stripe-php" library and will setup the secret key. Afterwards you can just use Stripe static classes following [their documentation](https://stripe.com/docs/api?lang=php#top).
+This will load the "stripe-php" library and will setup the secret key. Afterwards you can just use Stripe static classes following [Stripe documentation](https://stripe.com/docs/api?lang=php#top).
 
 Configuration File
 ----------
 
-The config file is found inside the config folder of the module folder. Copy the config file named, stripe.php, and then paste the copy in the config file inside the config folder found in the application folder.
-
-Now that the config file is inside application/config folder, add the informations needed, that are listed bellow.
-
-You need the test keys (only if you are testing out the code) and the live keys (only when you are ready to go live) that you will get from your Stripe account, in the [settings section](https://manage.stripe.com/#account/apikeys).
+You need the keys to configure this module. You can find the keys in your Stripe account, in the [settings section](https://manage.stripe.com/#account/apikeys).
 
 1. status
 2. test
