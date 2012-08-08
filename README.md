@@ -13,7 +13,7 @@ To add the submodule with Git you need to use these commands:
     git submodule init
     git submodule update
 
-Then in the boostrap file add the this module, to the modules method.
+Then in the boostrap file add this module, to the modules method.
 
 ###Adding the code:
 
