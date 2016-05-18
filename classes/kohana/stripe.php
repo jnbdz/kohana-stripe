@@ -20,14 +20,14 @@ class Kohana_Stripe {
 			return;
 		}
 
-		require_once Kohana::find_file('vendor', 'stripe-php/lib/Stripe', 'php');
+		require_once Kohana::find_file('vendor', 'stripe-php/init' , 'php');
 
 		$config = Kohana::config('stripe');
 		self::$status = $config['status'];
 		self::$secret_key = $config[self::$status]['secret_key'];
 		self::$publishable_key = $config[self::$status]['publishable_key'];
 
-		Stripe::setApiKey(self::$secret_key);
+		Stripe\Stripe::setApiKey(self::$secret_key);
 	}
 
 } // End of Stripe
